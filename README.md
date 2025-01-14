@@ -7,7 +7,7 @@
 ## Demo
 
 <div align="center">
-  <img src="/demo-assets/react-spinning-border-demo.gif" alt="Preview of the spinning border component" height="300px" width="auto">
+  <img src="https://raw.githubusercontent.com/seth-way/react-spinning-border/refs/heads/master/demo-assets/react-spinning-border-demo.gif" alt="Preview of the spinning border component" height="300px" width="auto">
 </div>
 
 ---
