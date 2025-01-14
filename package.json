@@ -1,7 +1,7 @@
 {
   "name": "react-spinning-border",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dynamic, spinning image border animation for react.",
   "author": "Seth Way",
   "license": "MIT",
