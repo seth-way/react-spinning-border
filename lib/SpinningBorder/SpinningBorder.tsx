@@ -47,11 +47,11 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
    * The overall size of the component.
    *
    * Options:
-   * - `'sm'`: Small size.
-   * - `'md'`: Medium size (default).
-   * - `'lg'`: Large size.
-   * - `'xl'`: Extra large size.
-   * - `'full'`: Full width.
+   * - `'sm'`: 96 X 96px.
+   * - `'md'`: 192 X 192px (default).
+   * - `'lg'`: 320 X 320px.
+   * - `'xl'`: 600 X 600px.
+   * - `'full'`: Full width of parent container.
    *
    * @default 'md'
    */
@@ -60,11 +60,11 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
   /**
    * The size of the border around the image.
    *
-   * Options:
-   * - `'sm'`: Small border.
-   * - `'md'`: Medium border (default).
-   * - `'lg'`: Large border.
-   * - `'xl'`: Extra large border.
+   * Options: 
+   * - `'sm'`: 3% width of parent container.
+   * - `'md'`: 5% (default).
+   * - `'lg'`: 7%.
+   * - `'xl'`: 8%.
    *
    * @default 'md'
    */
@@ -74,9 +74,9 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
    * The size of the gap between the border and the image.
    *
    * Options:
-   * - `'sm'`: Small padding.
-   * - `'md'`: Medium padding (default).
-   * - `'lg'`: Large padding.
+   * - `'sm'`: 2% width of parent container.
+   * - `'md'`: 3% (default).
+   * - `'lg'`: 7%.
    * - `'none'`: No padding.
    *
    * @default 'md'
@@ -87,7 +87,8 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
    * An optional number used to speed up or slow down the spin animation.
    *
    * - Recommended range: 0 to 10.
-   * - Higher values increase animation speed, lower values slow it down.
+   * - Higher values increase animation speed (relative to scroll speed)
+   * - Lower values slow it down.
    *
    * @default 1
    */
@@ -129,7 +130,7 @@ export const SpinningBorder = React.forwardRef<HTMLDivElement, SpinningBorderPro
     const borderStyle = { originX: 'center', originY: 'center' };
 
     const isValidImage = image && image.trim() !== '';
-    const fallbackMessage = "Please provide a valid image.";
+    const fallbackMessage = 'Please provide a valid image.';
 
     return (
       <div
