@@ -96,7 +96,7 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
 }
 
 const variants = {
-  base: 'aspect-square relative',
+  base: 'aspect-square relative min-w-10',
   sm: 'w-24',
   md: 'w-48',
   lg: 'w-80',
