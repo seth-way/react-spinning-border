@@ -60,7 +60,7 @@ export interface SpinningBorderProps extends React.HTMLAttributes<HTMLDivElement
   /**
    * The size of the border around the image.
    *
-   * Options: 
+   * Options:
    * - `'sm'`: 3% width of parent container.
    * - `'md'`: 5% (default).
    * - `'lg'`: 7%.
