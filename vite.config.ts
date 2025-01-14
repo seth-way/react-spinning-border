@@ -7,6 +7,7 @@ import dts from 'vite-plugin-dts';
 import { peerDependencies } from './package.json';
 
 export default defineConfig({
+  assetsInclude: ['**/*.jpg', '**/*.png'],
   plugins: [
     react(),
     dts({ rollupTypes: true }), // Output .d.ts files
@@ -22,6 +23,17 @@ export default defineConfig({
     rollupOptions: {
       // Exclude peer dependencies from the bundle to reduce bundle size
       external: ['react/jsx-runtime', ...Object.keys(peerDependencies)],
+      input: {
+        main: resolve(__dirname, join('lib', 'index.ts')),
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (/assets-demo/.test(assetInfo.name || '')) {
+            return '';
+          }
+          return '[name][extname]';
+        },
+      },
     },
   },
   test: {
