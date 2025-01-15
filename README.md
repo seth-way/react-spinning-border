@@ -4,6 +4,11 @@
 
 ---
 
+![NPM Downloads](https://img.shields.io/npm/dw/react-spinning-border)
+
+
+---
+
 ## Demo
 
 <div align="center">
